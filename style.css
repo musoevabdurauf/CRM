@@ -169,7 +169,7 @@ body{
 
 .card h3{
     font-size:18px;
-    margin-bottom:6px;
+    margin-bottom: 8px;
     color:#222;
     line-height:25px;
 }
@@ -178,7 +178,7 @@ body{
     gap:20px;
     color:#777;
     font-size:13px;
-    margin-bottom:6px;
+    margin-bottom: 6px;
 }
 .buttons{
     display:flex;
@@ -202,7 +202,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:8px;
+    border-radius: 8px;
     border:1px solid #ddd;
     text-decoration:none;
 }
