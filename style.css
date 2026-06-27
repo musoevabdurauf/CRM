@@ -169,16 +169,16 @@ body{
 
 .card h3{
     font-size:18px;
-    margin-bottom:15px;
+    margin-bottom:6px;
     color:#222;
     line-height:25px;
 }
 .meta{
     display:flex;
-    gap:18px;
+    gap:20px;
     color:#777;
     font-size:13px;
-    margin-bottom:20px;
+    margin-bottom:6px;
 }
 .buttons{
     display:flex;
