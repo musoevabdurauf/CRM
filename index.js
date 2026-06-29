@@ -1,6 +1,6 @@
-const API = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
+let API = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 
-const coursesGrid = document.getElementById("coursesGrid");
+let coursesGrid = document.getElementById("coursesGrid");
 
 fetch(API)
 .then(function(response){
@@ -12,35 +12,76 @@ fetch(API)
 
     let html = "";
 
-    courses.forEach(function(course){
+    for(let i = 0; i < courses.length; i++){
 
         html += `
-<div class="card">
+        <div class="card">
 
-    <img src="${course.logo}" alt="${course.name}">
+            <img src="${courses[i].logo}" alt="${courses[i].name}">
 
-    <div class="info">
+            <div class="info">
 
-        <h3>${course.name}</h3>
+                <h3>${courses[i].name}</h3>
 
-        <div class="meta">
-            <span>📚 Modules: ${course.module}</span>
-            <span>📖 Lessons: ${course.lessons}</span>
+                <div class="meta">
+                    <span>📚 Modules: ${courses[i].module}</span>
+                    <span>📖 Lessons: ${courses[i].lessons}</span>
+                </div>
+
+                <div class="buttons">
+                    <a class="journal" href="#">Journal</a>
+                    <a class="edit" href="#">✏</a>
+                </div>
+
+            </div>
+
         </div>
+        `;
 
-        <div class="buttons">
-            <a class="journal" href="#">Journal</a>
-            <a class="edit" href="">✏</a>
-        </div>
-
-    </div>
-
-</div>
-`;
-
-    });
+    }
 
     coursesGrid.innerHTML = html;
+
+    let overlay = document.getElementById("overlay");
+    let close = document.getElementById("close");
+
+    let courseLogo = document.getElementById("courseLogo");
+    let courseName = document.getElementById("courseName");
+    let courseModule = document.getElementById("courseModule");
+    let courseLesson = document.getElementById("courseLesson");
+
+    let cards = document.querySelectorAll(".card");
+
+    for(let i = 0; i < cards.length; i++){
+
+        cards[i].onclick = function(){
+
+            overlay.classList.add("active");
+
+            courseLogo.src = courses[i].logo;
+            courseName.innerHTML = courses[i].name;
+            courseModule.innerHTML = courses[i].module;
+            courseLesson.innerHTML = courses[i].lessons;
+
+        };
+
+    }
+
+    close.onclick = function(){
+
+        overlay.classList.remove("active");
+
+    };
+
+    overlay.onclick = function(event){
+
+        if(event.target == overlay){
+
+            overlay.classList.remove("active");
+
+        }
+
+    };
 
 })
 .catch(function(){
