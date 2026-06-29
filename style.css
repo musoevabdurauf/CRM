@@ -294,5 +294,90 @@ body{
 
 }
 
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.45);
 
+    display:none;
+
+    justify-content:flex-end;
+
+    z-index:999;
+}
+
+.overlay.active{
+    display:flex;
+}
+
+.drawer{
+
+    width:420px;
+
+    height:100vh;
+
+    background:#fff;
+
+    padding:25px;
+
+    animation:drawer .3s linear;
+
+}
+
+@keyframes drawer{
+
+from{
+transform:translateX(100%);
+}
+
+to{
+transform:translateX(0);
+}
+
+}
+
+.drawer-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:30px;
+
+}
+
+#close{
+
+font-size:30px;
+
+cursor:pointer;
+
+}
+
+.drawer-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.drawer-top img{
+
+width:100px;
+
+height:100px;
+
+border-radius:20px;
+
+object-fit:cover;
+
+}
 
