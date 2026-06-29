@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sadoqat.css">
+</head>
+<body>
+    
+    <div class="box">
+
+        <div class="box-left">
+
+            <header>
+                <img src="./img/Logo-fin2 copy.png" alt="">
+                <img src="./img/Profile.png" alt="">
+            </header>
+
+            <div class="box-bottom">
+                <div class="card-left">
+                    <img src="./img/insert_chart copy.png" alt="">
+                    <h1>Статистика</h1>
+                </div>
+                <div class="card-left">
+                    <img src="./img/mdi_view-grid-outline.png" alt="">
+                    <h1>Курсы</h1>
+                </div>
+                <div class="card-left">
+                    <img src="./img/supervised_user_circle.png" alt="">
+                    <h1>Пользователи</h1>
+                    <img src="./img/keyboard_arrow_down.png" alt="">
+                </div>
+                <div class="card-left">
+                    <img src="./img/supervisor_account.png" alt="">
+                    <h1>Менторы</h1>
+                </div>
+                <div class="card-left">
+                    <img src="./img/settings.png" alt="">
+                    <h1>Настройки</h1>
+                    <img src="./img/keyboard_arrow_down (1).png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="conteiner">
+
+            <div class="header">
+               <a href="./index.html"><img src="./img/arrow_back.png" alt=""></a> 
+                <h1>Новый курс</h1>
+            </div>
+            
+            <form id="courseForm">
+                <input type="text" id="nazvanie"   placeholder="Название курса">
+                <input type="text" id="opisanie"   placeholder="Краткое описание">
+                <input type="text" id="logotip"    placeholder="Логотип">
+                <div class="checkbox-group">
+                    <label for="sertifikat">Сертификат об окончании</label>
+                    <input type="checkbox" id="sertifikat">
+                </div>
+                <input type="text" id="moduli"     placeholder="Модули курса">
+                <input type="text" id="uroki"      placeholder="Уроки курса">
+                <input type="text" id="uchitel"    placeholder="Имя и Фамилия Учитель">
+                <input type="text" id="avatar"     placeholder="Аватар Учитель">
+                 <select id="kategoriya" >
+                    <option value="" disabled selected>Категория курса</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Paython">Paython</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML&CSS">HTML&CSS</option>
+                 </select>
+
+                <div class="checkbox-group">
+                    <label for="status">Статус курса</label>
+                    <input type="checkbox" id="status">
+                </div>
+            </form>
+
+        <div class="btn">
+            <button onclick="save()">Сохранить</button>
+            <button onclick="otmenit()">Отменить</button>
+        </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./sadoqat.js"></script>
+    
+</body>
+</html>
