@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--White_1, #f8f7f7);
+
+}
+.all{
+    display: flex;
+}
+.right{
+    width: 20%;
+    /* border: 2px solid blue; */
+}
+.box1{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.box1 button{
+    background: var(--Accent-Primary, #2563EB);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+.lll{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.lll select{
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    
+}
+#form{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    /* height: 100px; */
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.left{
+    width: 70%;
+    margin: auto;
+}
+#form input{
+    width: 94%;
+    margin-left: 2%;
+    margin-top: 20px;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: gray;
+}
+#form button{
+    background: var(--Accent-Primary, #2563EB);
+    font-size: 24px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 80%;
+    margin-top: 20px;
+}
