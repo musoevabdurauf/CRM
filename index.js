@@ -4,9 +4,7 @@ let coursesGrid = document.getElementById("coursesGrid");
 
 fetch(API)
 .then(function(response){
-
     return response.json();
-
 })
 .then(function(courses){
 
@@ -30,7 +28,11 @@ fetch(API)
 
                 <div class="buttons">
                     <a class="journal" href="#">Journal</a>
-                    <a class="edit" href="#">✏</a>
+
+                    <button class="edit" data-id="${courses[i].id}">
+                        ✏
+                    </button>
+
                 </div>
 
             </div>
@@ -66,6 +68,21 @@ fetch(API)
         };
 
     }
+
+    let edit = document.querySelectorAll(".edit");
+
+    for(let i = 0; i < edit.length; i++){
+
+        edit[i].onclick = function(e){
+
+            e.stopPropagation();
+
+            window.location = "edit.html" 
+
+        }
+
+    }
+
 
     close.onclick = function(){
 
