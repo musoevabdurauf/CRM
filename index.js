@@ -69,19 +69,19 @@ fetch(API)
 
     }
 
-    let edit = document.querySelectorAll(".edit");
+let cards = document.querySelectorAll(".card");
 
-    for(let i = 0; i < edit.length; i++){
+for(let i = 0; i < cards.length; i++){
 
-        edit[i].onclick = function(e){
+    cards[i].onclick = function(){
 
-            e.stopPropagation();
+        localStorage.setItem("courseId", courses[i].id);
 
-            window.location = "edit.html"
+        window.location.href = "edit.html";
 
-        }
+    };
 
-    }
+}
 
 
     close.onclick = function(){
