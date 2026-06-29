@@ -38,8 +38,8 @@ async function edit() {
     let updatedCourse = await response.json()
     console.log("Обновлено:", updatedCourse)
 }
-
-form.addEventListener("submit", function (e) {
+form.onsubmit( (e) =>{
     e.preventDefault()
     edit()
+    window.location = "index.html"
 })
