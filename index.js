@@ -30,7 +30,7 @@ fetch(API)
 
         <div class="buttons">
             <a class="journal" href="#">Journal</a>
-            <a class="edit" href="#">✏</a>
+            <a class="edit" href="">✏</a>
         </div>
 
     </div>
