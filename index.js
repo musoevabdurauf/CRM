@@ -77,7 +77,7 @@ fetch(API)
 
             e.stopPropagation();
 
-            window.location = "edit.html" 
+            window.location = "edit.html"
 
         }
 
