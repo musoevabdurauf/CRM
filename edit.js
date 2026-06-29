@@ -1,10 +1,7 @@
-
-
-
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses"
 let courseId = localStorage.getItem("courseId")
-// console.log(courseId);
 let form = document.getElementById("form");
+
 async function get() {
     let response = await fetch(`${url}/${courseId}`)
     let courseInfo = await response.json()
@@ -21,13 +18,28 @@ get()
 
 async function edit() {
     let newCourse = {
-        name: form["courseName"].value
+        name: form["courseName"].value,
+        mentorName: form["mentorName"].value,
+        lessons: form["lessons"].value,
+        module: form["module"].value,
+        category: form["category"].value,
+        logo: form["logo"].value,
+        description: form["description"].value
     }
-    let response = await fetch (`${url}/${courseId}` ,{
+
+    let response = await fetch(`${url}/${courseId}`, {
         method: "PUT",
-        headers:{
+        headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(newCourse)
     })
+
+    let updatedCourse = await response.json()
+    console.log("Обновлено:", updatedCourse)
 }
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault()
+    edit()
+})
