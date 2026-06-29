@@ -6,13 +6,13 @@ function save() {
         name:        document.getElementById("nazvanie").value.trim(),
         description: document.getElementById("opisanie").value.trim(),
         logo:        document.getElementById("logotip").value.trim(),
-        sertifikat:  document.getElementById("sertifikat").value.trim(),
+        sertifikat:  document.getElementById("sertifikat").checked,
         module:      document.getElementById("moduli").value.trim(),
         lessons:     document.getElementById("uroki").value.trim(),
         teacher:     document.getElementById("uchitel").value.trim(),
         avatar:      document.getElementById("avatar").value.trim(),
         category:    document.getElementById("kategoriya").value.trim(),
-        status:      document.getElementById("status").value.trim(),
+        status:      document.getElementById("status").checked,
     };
 
     if (!data.name) {

@@ -164,3 +164,45 @@ form input:nth-child(2){
     border: 1px solid #2f6df6;
     color: #2f6df6;
 }
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.checkbox-group label {
+    font-size: 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #2f6df6;
+}
+
+form select {
+    height: 45px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    color: #999;
+    background: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+form select:focus {
+    border-color: #2f6df6;
+    color: #222;
+}

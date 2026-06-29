@@ -55,13 +55,28 @@
                 <input type="text" id="nazvanie"   placeholder="Название курса">
                 <input type="text" id="opisanie"   placeholder="Краткое описание">
                 <input type="text" id="logotip"    placeholder="Логотип">
-                <input type="text" id="sertifikat" placeholder="Сертификат об окончании">
+                <div class="checkbox-group">
+                    <label for="sertifikat">Сертификат об окончании</label>
+                    <input type="checkbox" id="sertifikat">
+                </div>
                 <input type="text" id="moduli"     placeholder="Модули курса">
                 <input type="text" id="uroki"      placeholder="Уроки курса">
                 <input type="text" id="uchitel"    placeholder="Имя и Фамилия Учитель">
                 <input type="text" id="avatar"     placeholder="Аватар Учитель">
-                <input type="text" id="kategoriya" placeholder="Категория курса">
-                <input type="text" id="status"     placeholder="Статус курса">
+                 <select id="kategoriya" >
+                    <option value="" disabled selected>Категория курса</option>
+                    <option value="Backend">Backend</option>
+                    <option value="Frontend">Frontend</option>
+                    <option value="Paython">Paython</option>
+                    <option value="C++">C++</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML&CSS">HTML&CSS</option>
+                 </select>
+
+                <div class="checkbox-group">
+                    <label for="status">Статус курса</label>
+                    <input type="checkbox" id="status">
+                </div>
             </form>
 
         <div class="btn">
