@@ -41,5 +41,5 @@ async function edit() {
 form.onsubmit = ((e) =>{
     e.preventDefault()
     edit()
-    window.location = "index.html"
+    // window.location = "index.html"
 })
