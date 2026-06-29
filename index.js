@@ -3,110 +3,98 @@ let API = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 let coursesGrid = document.getElementById("coursesGrid");
 
 fetch(API)
-.then(function(response){
-    return response.json();
-})
-.then(function(courses){
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (courses) {
 
-    let html = "";
+        let html = "";
 
-    for(let i = 0; i < courses.length; i++){
+        courses.forEach(function (course) {
 
-        html += `
-        <div class="card">
 
-            <img src="${courses[i].logo}" alt="${courses[i].name}">
+            let logo    = course.logo    || "default-logo.png";
+            let name    = course.name    || "-";
+            let module  = course.module  || "—";
+            let lessons = course.lessons || "—";
 
-            <div class="info">
+            html += `
+            <div class="card">
 
-                <h3>${courses[i].name}</h3>
+                <img src="${logo}" alt="${name}">
 
-                <div class="meta">
-                    <span>📚 Modules: ${courses[i].module}</span>
-                    <span>📖 Lessons: ${courses[i].lessons}</span>
-                </div>
+                <div class="info">
 
-                <div class="buttons">
-                    <a class="journal" href="#">Journal</a>
+                    <h3>${name}</h3>
 
-                    <button class="edit" data-id="${courses[i].id}">
-                        ✏
-                    </button>
+                    <div class="meta">
+                        <span>📚 Modules: ${module}</span>
+                        <span>📖 Lessons: ${lessons}</span>
+                    </div>
+
+                    <div class="buttons">
+                        <a class="journal" href="#">Journal</a>
+
+                        <button class="edit" data-id="${course.id}">
+                            ✏
+                        </button>
+                    </div>
 
                 </div>
 
             </div>
+            `;
+        });
 
-        </div>
-        `;
+        coursesGrid.innerHTML = html;
 
-    }
+        let overlay     = document.getElementById("overlay");
+        let close       = document.getElementById("close");
+        let courseLogo  = document.getElementById("courseLogo");
+        let courseName  = document.getElementById("courseName");
+        let courseModule = document.getElementById("courseModule");
+        let courseLesson = document.getElementById("courseLesson");
 
-    coursesGrid.innerHTML = html;
+        let cards = document.querySelectorAll(".card");
 
-    let overlay = document.getElementById("overlay");
-    let close = document.getElementById("close");
+        cards.forEach(function (card, i) {
 
-    let courseLogo = document.getElementById("courseLogo");
-    let courseName = document.getElementById("courseName");
-    let courseModule = document.getElementById("courseModule");
-    let courseLesson = document.getElementById("courseLesson");
+            card.onclick = function () {
+                overlay.classList.add("active");
 
-    let cards = document.querySelectorAll(".card");
+                courseLogo.src       = courses[i].logo    || "default-logo.png";
+                courseName.innerHTML  = courses[i].name    || "Noma'lum kurs";
+                courseModule.innerHTML = courses[i].module  || "—";
+                courseLesson.innerHTML = courses[i].lessons || "—";
+            };
 
-    for(let i = 0; i < cards.length; i++){
+            let editBtn = card.querySelector(".edit");
 
-        cards[i].onclick = function(){
+            editBtn.onclick = function (event) {
+                event.stopPropagation(); 
 
-            overlay.classList.add("active");
+                localStorage.setItem("courseId", courses[i].id);
+                window.location.href = "edit.html";
+            };
 
-            courseLogo.src = courses[i].logo;
-            courseName.innerHTML = courses[i].name;
-            courseModule.innerHTML = courses[i].module;
-            courseLesson.innerHTML = courses[i].lessons;
+        });
 
+        
+        close.onclick = function () {
+            overlay.classList.remove("active");
         };
 
-    }
+        overlay.onclick = function (event) {
+            if (event.target === overlay) {
+                overlay.classList.remove("active");
+            }
+        };
 
-let cards = document.querySelectorAll(".card");
-
-for(let i = 0; i < cards.length; i++){
-
-    cards[i].onclick = function(){
-
-        localStorage.setItem("courseId", courses[i].id);
-
-        window.location.href = "edit.html";
-
-    };
-
-}
-
-
-    close.onclick = function(){
-
-        overlay.classList.remove("active");
-
-    };
-
-    overlay.onclick = function(event){
-
-        if(event.target == overlay){
-
-            overlay.classList.remove("active");
-
-        }
-
-    };
-
-})
-.catch(function(){
-
-    coursesGrid.innerHTML = `
-        <h2 class="error">
-            Error loading courses!
-        </h2>
-    `;
-
-});
+    })
+    .catch(function () {
+        coursesGrid.innerHTML = `
+            <h2 class="error">
+                Error loading courses!
+            </h2>
+        `;
+    });
