@@ -34,11 +34,11 @@ async function edit() {
         },
         body: JSON.stringify(newCourse)
     })
-
+    
     let updatedCourse = await response.json()
     console.log("Обновлено:", updatedCourse)
 }
-form.onsubmit( (e) =>{
+form.onsubmit( (e) =>{ 
     e.preventDefault()
     edit()
     window.location = "index.html"
