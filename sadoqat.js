@@ -15,7 +15,10 @@ function save() {
         status:      document.getElementById("status").checked,
     };
 
-    if (!data.name) {
+    if (!data.name || !data.description || !data.logo || !data.sertifikat 
+        || !data.module || !data.lessons || !data.teacher || !data.avatar || !data.category 
+        || !data.status
+    ) {
         alert("Nomi kursro vorid kuned!");
         document.getElementById("nazvanie").focus();
         return;
