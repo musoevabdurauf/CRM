@@ -1,120 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omuz Courses</title>
-
+    <title>Omuz — Courses</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="layout">
+<div class="layout">
 
+    <aside class="sidebar">
 
-        <aside class="sidebar">
+        <div class="logo">
+            <img src="./img/Logo-fin2 copy.png" alt="Omuz logo">
+        </div>
 
-            <div class="logo">
-                <img src="./img/Logo-fin2 copy.png" alt="">
-            </div>
+        <ul class="menu">
 
-            <ul class="menu">
+            <li>
+                <a href="#">
+                    <img src="./img/insert_chart copy.png" alt="">
+                    Statistics
+                </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        <img src="./img/insert_chart copy.png" alt="">
-                        Statistics
-                    </a>
-                </li>
+            <li class="active">
+                <a href="#">
+                    <img src="./img/mdi_view-grid-outline.png" alt="">
+                    Courses
+                </a>
+            </li>
 
-                <li class="active">
-                    <a href="#">
-                        <img src="./img/mdi_view-grid-outline.png" alt="">
-                        Courses
-                    </a>
-                </li>
+            <li>
+                <a href="#">
+                    <img src="./img/supervised_user_circle.png" alt="">
+                    Users
+                </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        <img src="./img/supervised_user_circle.png" alt="">
-                        Users
-                    </a>
-                </li>
+            <li>
+                <a href="#">
+                    <img src="./img/supervisor_account.png" alt="">
+                    Mentors
+                </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        <img src="./img/supervisor_account.png" alt="">
-                        Mentors
-                    </a>
-                </li>
+            <li>
+                <a href="#">
+                    <img src="./img/settings.png" alt="">
+                    Settings
+                </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        <img src="./img/settings.png" alt="">
-                        Settings
-                    </a>
-                </li>
+        </ul>
 
-            </ul>
+    </aside>
 
-        </aside>
+    <main class="main">
 
+        <header class="header">
+            <h1>Courses</h1>
+            <a href="./sadoqat.html">+ New course</a>
+        </header>
 
-        <main class="main">
+        <section class="courses">
+            <div id="coursesGrid" class="grid"></div>
+        </section>
+ 
+    </main>
 
-            <header class="header">
+</div>
 
-                <h1>Курсы</h1>
-
-                <a href="./sadoqat.html">+ Новый курс</a>
-
-            </header>
-
-            <section class="courses">
-
-                <div id="coursesGrid" class="grid">
-
-
-                </div>
-
-            </section>
-
-        </main>
-
-    </div>
-    <div class="overlay" id="overlay">
-
-        <div class="drawer">
-
-            <div class="drawer-header">
-
-                <span id="close">&times;</span>
-
-                <h3>Course</h3>
-
-            </div>
-
-            <div class="drawer-top">
-
-                <div>
+<div class="overlay" id="overlay">
 
                     <h2 id="courseName"></h2>
 
-                    <p>📚 Modules:
-                        <span id="courseModule"></span>
-                    </p>
+        <div class="drawer-header">
+            <h3>Course info</h3>
+            <button id="close">&times;</button>
+        </div>
 
-                    <p>📖 Lessons:
-                        <span id="courseLesson"></span>
-                    </p>
+        <div class="drawer-top">
 
-                </div>
-
-                <img id="courseLogo">
-
+            <div class="drawer-info">
+                <h2 id="courseName"></h2>
+                <p>📚 Modules: <span id="courseModule"></span></p>
+                <p>📖 Lessons: <span id="courseLesson"></span></p>
             </div>
+
+            <img id="courseLogo" src="" alt="Course logo">
 
         </div>
 
@@ -123,5 +99,4 @@
     <script src="index.js"></script>
 
 </body>
-
 </html>
