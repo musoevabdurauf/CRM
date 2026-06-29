@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: var(--White_1, #FFFFFF);
+    background: var(--White_1, #f8f7f7);
 
 }
 .all{
@@ -49,4 +49,35 @@ body{
     font-weight: 600;
     border: none;
     
+}
+#form{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    /* height: 100px; */
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.left{
+    width: 70%;
+    margin: auto;
+}
+#form input{
+    width: 94%;
+    margin-left: 2%;
+    margin-top: 20px;
+    font-size: 26px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: gray;
+}
+#form button{
+    background: var(--Accent-Primary, #2563EB);
+    font-size: 24px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 80%;
+    margin-top: 20px;
 }
