@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="addmentors.css">
+</head>
+
+<body>
+
+    <div class="all">
+        <div class="right">
+            <div class="box1">
+                <img src="/img/Logo-fin2.png" alt="">
+                <button>H</button>
+            </div>
+            <div class="box2">
+                <div class="lll">
+                    <img style="width: 102;height: 44;" src="/img/insert_chart.png" alt="">
+                    <p>Статистика</p>
+                </div>
+                <div class="lll" style="background: var(--Blue-Gray-200, #E2E8F0);">
+                    <img src="/img/mdi_view-grid-outline.png" alt="">
+                    <p>Курсы</p>
+                </div>
+                <div class="lll">
+                    <img src="img/supervised_user_circl.png" alt="">
+                    <select name="" id="" style="background-color: transparent;">
+                        <option value="">Пользователи</option>
+                    </select>
+                </div>
+                <div class="lll">
+                    <img src="/img/supervisor_accoun.png" alt="">
+                    <p>Менторы</p>
+                </div>
+                <div class="lll">
+                    <img src="/img/setting.png" alt="">
+                    <select name="" id="" style="background-color: transparent;">
+                        <option value="">Настройки</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <main class="left">
+            <div class="topbox">
+                <a style="text-decoration: none; color: black;" href="index.html" class="back-link">
+                    <div style="display: flex; align-items: center;">
+                        <img src="/img/arrow_back.png" alt="">
+                        <h2 style="font-size: 24px; font-weight: 700;">Назад</h2>
+                    </div>
+                </a>
+            </div>
+
+            <form id="form" class="form">
+
+                <div class="top">
+                    <div style="display: flex; align-items: baseline;">
+                        <div class="top-r">
+                            <input type="text" id="name" name="name" placeholder="Имя" required>
+                            <input type="text" id="surname" name="surname" placeholder="Фамилия" required>
+                            <input type="date" id="dateBirthday" name="dateBirthday" required>
+                            <select id="location" name="location">
+                                <option value="Таджикистан, Душанбе">Таджикистан, Душанбе</option>
+                                <option value="Узбекистан, Ташкент">Узбекистан, Ташкент</option>
+                                <option value="Казахстан, Алматы">Казахстан, Алматы</option>
+                                <option value="Кыргызстан, Бишкек">Кыргызстан, Бишкек</option>
+                            </select>
+                            <input type="email" id="email" name="email" placeholder="email@simple.com" required>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+992 ___ __ __ __">
+                            <input type="text" id="Position" name="Position" placeholder="Например, преподаватель C++">
+                            <textarea id="description" name="description"
+                                placeholder="Краткая биография ментора"></textarea>
+                        </div>
+
+                        <div class="top-l">
+                            <h2>Фото (❁´◡`❁)</h2>
+                            <div style="width: 250px; height: 250px; border: 2px solid black; border-radius: 20px; ">
+                                <button
+                                    style="width: 50px; height: 50px; font-size: 50px; font-weight: 100; background-color: white; border: none; margin-left: 40%; margin-top: 40%;">+</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div
+                    style="background-color: white; padding: 20px 20px; border-radius: 20px; margin-top: 30px; margin-bottom: 20px;">
+                    <h3>Скиллы</h3>
+                    <div class="bottom">
+                        <input type="text" id="Skil-1" name="Skil-1" placeholder="Например, C++">
+                        <input type="text" id="Skil-2" name="Skil-2" placeholder="Например, C#"
+                            style="margin-left: 30px;">
+                        <input type="text" id="Skil-3" name="Skil-3" placeholder="Например, Flutter">
+                        <input type="text" id="Skil-4" name="Skil-4" placeholder="Например, HTML & CSS"
+                            style="margin-left: 30px;">
+                    </div>
+                </div>
+                <div class="futter">
+                    <button type="submit" class="btn btn-primary" style="background: var(--Accent-Primary, #2563EB); color: white;  text-align: center; align-items: center; padding: 10px ; margin-left: 800px;" >Сохранить</button>
+                    <button type="button" id="cancelBtn" class="btn btn-secondary" style="border: 2px solid #2563EB ; color: #2563EB;  margin-left: 30px;" > Отменить</button>
+                </div>
+            </form>
+    </div>
+
+    <script src="addmentors.js"></script>
+</body>
+
+</html>
