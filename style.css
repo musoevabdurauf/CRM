@@ -246,6 +246,7 @@ body {
     height: 100vh;
     background: #fff;
     padding: 25px;
+    overflow-y: auto;
     animation: drawerSlide .3s linear;
 }
 
@@ -331,4 +332,231 @@ body {
 .mentor-info span {
     font-size: 13px;
     color: #888;
+}
+
+
+/* ===== Action row: Edit / Eye / Badge ===== */
+.action-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit-btn {
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.edit-btn:hover {
+    background: #1d4ed8;
+}
+
+.eye-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.eye-btn:hover {
+    border-color: #2563eb;
+}
+
+.badge {
+    margin-left: auto;
+    background: #edf3ff;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+
+/* ===== Journal block ===== */
+.journal-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f7f9ff;
+    border-radius: 12px;
+    padding: 16px;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: .3s;
+}
+
+.journal-block:hover {
+    background: #edf3ff;
+}
+
+.journal-icon {
+    font-size: 18px;
+}
+
+
+/* ===== Accordion list ===== */
+.accordion-list {
+    border-top: 1px solid #ececec;
+    margin-top: 25px;
+}
+
+.accordion-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 4px;
+    border-bottom: 1px solid #ececec;
+    cursor: pointer;
+    font-size: 14px;
+    color: #222;
+    transition: .3s;
+}
+
+.accordion-item:hover {
+    color: #2563eb;
+}
+
+.accordion-item .chevron {
+    margin-left: auto;
+    color: #999;
+    font-size: 18px;
+    transition: transform .2s ease;
+}
+
+.accordion-item.open .chevron {
+    transform: rotate(90deg);
+    color: #2563eb;
+}
+
+.accordion-item .rating {
+    color: #f5a623;
+    font-size: 13px;
+    margin-left: auto;
+}
+
+.accordion-item .rating + .chevron {
+    margin-left: 8px;
+}
+
+.accordion-panel {
+    padding: 12px 4px 18px;
+    border-bottom: 1px solid #ececec;
+    font-size: 14px;
+    color: #555;
+}
+
+.accordion-panel.hidden {
+    display: none;
+}
+
+
+/* ===== Mentors / Teachers ===== */
+.mentors-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.mentors-header .mentor-title {
+    margin-bottom: 0;
+}
+
+.add-btn {
+    text-decoration: none;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.add-btn:hover {
+    color: #1d4ed8;
+}
+
+
+/* ===== Add mentor form ===== */
+.add-mentor-form {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f7f9ff;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.add-mentor-form.hidden {
+    display: none;
+}
+
+.add-mentor-form input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+.add-mentor-form input:focus {
+    border-color: #2563eb;
+}
+
+.add-mentor-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.save-btn {
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: .3s;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+.cancel-btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cancel-btn:hover {
+    background: #f3f5f9;
 }
