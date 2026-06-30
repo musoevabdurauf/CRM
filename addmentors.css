@@ -131,3 +131,19 @@ body{
     display: flex;
     margin-bottom: 100px;
 }
+.radio{
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+.radio label{
+    font-size: 20px;
+}
+.radio input{
+    margin-left: -100px;
+    margin-top: -0px;
+}
+.radio{
+    margin-top: 20px;
+    padding-left: 10px;
+}

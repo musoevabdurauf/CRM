@@ -1,5 +1,5 @@
 let url = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Mentors"
-let form = document.getElementById("form")
+let form = document.querySelector("#form")
 let cancelBtn = document.getElementById("cancelBtn")
 
 
@@ -8,7 +8,6 @@ async function addMentor() {
         name: form["name"].value,
         surname: form["surname"].value,
         dateBirthday: form["dateBirthday"].value,
-        gender: form["gender"].value,
         location: form["location"].value,
         email: form["email"].value,
         phoneNumber: form["phoneNumber"].value,
@@ -28,15 +27,14 @@ async function addMentor() {
         },
         body: JSON.stringify(newMentor)
     })
-
 }
 
 form.onsubmit = (e) => {
     e.preventDefault()
     addMentor()
-    window.location = ""
+    // window.location = ""
 }
 
 cancelBtn.onclick = () => {
-    window.location = ""
+    // window.location = ""
 }
