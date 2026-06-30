@@ -112,7 +112,6 @@ function initDrawer() {
             overlay.classList.add("active");
             mentorForm.classList.add("hidden");
 
-            // collapse all accordion panels each time a new course opens
             document.querySelectorAll(".accordion-panel").forEach(function (p) {
                 p.classList.add("hidden");
             });
@@ -168,7 +167,6 @@ function initDrawer() {
         window.location.href = "journal.html";
     };
 
-    // Accordion toggle
     document.querySelectorAll(".accordion-item").forEach(function (item) {
         item.onclick = function () {
             let targetId = item.getAttribute("data-target");

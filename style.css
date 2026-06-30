@@ -335,7 +335,6 @@ body {
 }
 
 
-/* ===== Action row: Edit / Eye / Badge ===== */
 .action-row {
     display: flex;
     align-items: center;
@@ -389,7 +388,6 @@ body {
 }
 
 
-/* ===== Journal block ===== */
 .journal-block {
     display: flex;
     align-items: center;
@@ -413,7 +411,6 @@ body {
 }
 
 
-/* ===== Accordion list ===== */
 .accordion-list {
     border-top: 1px solid #ececec;
     margin-top: 25px;
@@ -469,7 +466,6 @@ body {
 }
 
 
-/* ===== Mentors / Teachers ===== */
 .mentors-header {
     display: flex;
     justify-content: space-between;
@@ -495,7 +491,6 @@ body {
 }
 
 
-/* ===== Add mentor form ===== */
 .add-mentor-form {
     margin-top: 14px;
     display: flex;
@@ -544,7 +539,7 @@ body {
 }
 
 .save-btn:hover {
-    background: #1d4ed8;
+    background: #1f50d6;
 }
 
 .cancel-btn {
