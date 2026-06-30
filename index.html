@@ -11,69 +11,56 @@
 <div class="layout">
 
     <aside class="sidebar">
-
         <div class="logo">
             <img src="./img/Logo-fin2 copy.png" alt="Omuz logo">
         </div>
-
         <ul class="menu">
-
             <li>
                 <a href="#">
                     <img src="./img/insert_chart copy.png" alt="">
                     Statistics
                 </a>
             </li>
-
             <li class="active">
                 <a href="#">
                     <img src="./img/mdi_view-grid-outline.png" alt="">
                     Courses
                 </a>
             </li>
-
             <li>
                 <a href="#">
                     <img src="./img/supervised_user_circle.png" alt="">
                     Users
                 </a>
             </li>
-
             <li>
                 <a href="#">
                     <img src="./img/supervisor_account.png" alt="">
                     Mentors
                 </a>
             </li>
-
             <li>
                 <a href="#">
                     <img src="./img/settings.png" alt="">
                     Settings
                 </a>
             </li>
-
         </ul>
-
     </aside>
 
     <main class="main">
-
         <header class="header">
             <h1>Courses</h1>
             <a href="./sadoqat.html">+ New course</a>
         </header>
-
         <section class="courses">
             <div id="coursesGrid" class="grid"></div>
         </section>
- 
     </main>
 
 </div>
 
 <div class="overlay" id="overlay">
-
     <div class="drawer">
 
         <div class="drawer-header">
@@ -82,22 +69,30 @@
         </div>
 
         <div class="drawer-top">
-
             <div class="drawer-info">
                 <h2 id="courseName"></h2>
                 <p>📚 Modules: <span id="courseModule"></span></p>
                 <p>📖 Lessons: <span id="courseLesson"></span></p>
             </div>
-
             <img id="courseLogo" src="" alt="Course logo">
+        </div>
 
+        <hr class="divider">
+
+        <div class="drawer-mentor">
+            <h4 class="mentor-title">Mentor</h4>
+            <div class="mentor-card">
+                <img id="mentorImg" src="" alt="Mentor">
+                <div class="mentor-info">
+                    <p id="mentorName"></p>
+                    <span id="mentorPhone"></span>
+                </div>
+            </div>
         </div>
 
     </div>
-
 </div>
 
 <script src="index.js"></script>
-
 </body>
 </html>

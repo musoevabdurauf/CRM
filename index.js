@@ -1,7 +1,7 @@
 let API = "https://63849dde3fa7acb14ffada13.mockapi.io/api/Courses";
 
-let DEFAULT_COURSE_IMG  = "./img/download.jpg";   
-let DEFAULT_MENTOR_IMG  = "./img/user.png";   
+let DEFAULT_COURSE_IMG = "./img/download.jpg";
+let DEFAULT_MENTOR_IMG = "./img/user.png";
 
 let coursesGrid = document.getElementById("coursesGrid");
 
@@ -15,35 +15,25 @@ fetch(API)
 
         courses.forEach(function (course) {
 
-            let logo    = course.logo   || DEFAULT_COURSE_IMG;
-
-            let mentor  = course.mentor || DEFAULT_MENTOR_IMG;
-
-            let name    = course.name    || "Noma'lum kurs";
+            let logo    = course.logo    || DEFAULT_COURSE_IMG;
+            let name    = course.name    || "-";
             let module  = course.module  || "—";
             let lessons = course.lessons || "—";
 
             html += `
             <div class="card">
-
                 <img src="${logo}" alt="${name}">
-
                 <div class="info">
-
                     <h3>${name}</h3>
-
                     <div class="meta">
                         <span>📚 Modules: ${module}</span>
                         <span>📖 Lessons: ${lessons}</span>
                     </div>
-
                     <div class="buttons">
                         <a class="journal" href="#">Journal</a>
                         <button class="edit" data-id="${course.id}">✏</button>
                     </div>
-
                 </div>
-
             </div>
             `;
         });
@@ -57,6 +47,8 @@ fetch(API)
         let courseModule = document.getElementById("courseModule");
         let courseLesson = document.getElementById("courseLesson");
         let mentorImg    = document.getElementById("mentorImg");
+        let mentorName   = document.getElementById("mentorName");
+        let mentorPhone  = document.getElementById("mentorPhone");
 
         let cards = document.querySelectorAll(".card");
 
@@ -65,15 +57,14 @@ fetch(API)
             card.onclick = function () {
                 overlay.classList.add("active");
 
-                courseLogo.src = courses[i].logo || DEFAULT_COURSE_IMG;
+                courseLogo.src         = courses[i].logo    || DEFAULT_COURSE_IMG;
+                courseName.innerHTML   = courses[i].name    || "-";
+                courseModule.innerHTML = courses[i].module  || "—";
+                courseLesson.innerHTML = courses[i].lessons || "—";
 
-                if (mentorImg) {
-                    mentorImg.src = courses[i].mentor || DEFAULT_MENTOR_IMG;
-                }
-
-                courseName.innerHTML   = courses[i].name    || "Noma'lum kurs";
-                courseModule.innerHTML = courses[i].module   || "—";
-                courseLesson.innerHTML = courses[i].lessons  || "—";
+                mentorImg.src         = courses[i].mentorImg   || DEFAULT_MENTOR_IMG;
+                mentorName.innerHTML  = courses[i].mentorName  || "-";
+                mentorPhone.innerHTML = courses[i].mentorPhone || "—";
             };
 
             let editBtn = card.querySelector(".edit");
