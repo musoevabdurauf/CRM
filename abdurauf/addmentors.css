@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--White_1, #f8f7f7);
+
+}
+.all{
+    display: flex;
+}
+.right{
+    width: 20%;
+    /* border: 2px solid blue; */
+}
+.box1{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.box1 button{
+    background: var(--Accent-Primary, #2563EB);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+.lll{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.lll select{
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    
+}
+.topbox{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.form{
+    /* background-color: white; */
+    margin-top: 50px;
+    width: 100%;
+    margin-left: 30px;
+    /* padding: 10px 20px; */
+    
+}
+.left{
+    width: 75%;
+}
+.top-l{
+    margin-left: 180px;
+}
+.top-r{
+    display: flex;
+    flex-wrap: wrap;
+}
+.top input{
+    width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-size: 16px;
+}
+#location{
+    width: 520px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.radio-group{
+    display: flex;
+    width: 600px;
+}
+#description{
+    max-width: 650px;
+    min-width: 650px;
+    min-height: 70px;
+    max-height: 90px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.top{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+.bottom input{
+    width: 500px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+.futter button{
+        /* width: 120px; */
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+.futter{
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+}
+.radio{
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+.radio label{
+    font-size: 20px;
+}
+.radio input{
+    margin-left: -100px;
+    margin-top: -0px;
+}
+.radio{
+    margin-top: 20px;
+    padding-left: 10px;
+}
