@@ -29,7 +29,7 @@ async function getMentors(){
             </div>
             <div class="bottom">
                 ${contactValue}
-                <img src="${arrowSrc}" alt="">
+                <button class="btn">-></button>
             </div>
             `
             mentorsGrid.appendChild(div)
