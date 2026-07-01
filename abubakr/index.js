@@ -28,7 +28,7 @@ fetch(API)
                         <span>📖 Уроки: ${lessons}</span>
                     </div>
                     <div class="buttons">
-                        <a class="journal" href="#">Журнал</a>
+                        <a class="journal" href="../abdurauf/edit.html">Журнал</a>
                         <button class="edit" data-id="${course.id}">✏</button>
                     </div>
                 </div>
