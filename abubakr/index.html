@@ -8,57 +8,53 @@
 </head>
 
 <body>
-
 <div class="layout">
-
     <aside class="sidebar">
         <div class="logo">
-            <img src="./img/Logo-fin2 copy.png" alt="Omuz logo">
+            <img src="../img/Logo-fin2 copy.png" alt="Omuz logo">
         </div>
         <ul class="menu">
             <li>
                 <a href="#">
-                    <img src="./img/insert_chart copy.png" alt="">
-                    Statistics
+                    <img src="../img/insert_chart copy.png" alt="">
+                    Статистика
                 </a>
             </li>
             <li class="active">
                 <a href="#">
-                    <img src="./img/mdi_view-grid-outline.png" alt="">
-                    Courses
+                    <img src="../img/mdi_view-grid-outline.png" alt="">
+                    Курсы
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="./img/supervised_user_circle.png" alt="">
-                    Users
+                    <img src="../img/supervised_user_circle.png" alt="">
+                    Пользователи
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="./img/supervisor_account.png" alt="">
-                    Mentors
+                    <img src="../img/supervisor_account.png" alt="">
+                    Менторы
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="./img/settings.png" alt="">
-                    Settings
+                    <img src="../img/settings.png" alt="">
+                    Настройки
                 </a>
             </li>
         </ul>
     </aside>
-
     <main class="main">
         <header class="header">
-            <h1>Courses</h1>
-            <a href="./sadoqat.html">+ New course</a>
+            <h1>Курсы</h1>
+            <a href="../sadoqat/sadoqat.html">+Новый курс </a>
         </header>
         <section class="courses">
             <div id="coursesGrid" class="grid"></div>
         </section>
     </main>
-
 </div>
 
 <div class="overlay" id="overlay">
@@ -67,29 +63,81 @@
                     <h2 id="courseName"></h2>
 
         <div class="drawer-header">
-            <h3>Course info</h3>
             <button id="close">&times;</button>
+            <h3>Курс</h3>
         </div>
 
         <div class="drawer-top">
-            <div class="drawer-info">
+            <div>
                 <h2 id="courseName"></h2>
-                <p>📚 Modules: <span id="courseModule"></span></p>
-                <p>📖 Lessons: <span id="courseLesson"></span></p>
+                <p>📚 Модули: <span id="courseModule"></span></p>
+                <p>📖 Уроки: <span id="courseLesson"></span></p>
             </div>
             <img id="courseLogo" src="" alt="Course logo">
         </div>
 
-        <hr class="divider">
+        <div class="action-row">
+            <a href="#" class="edit-btn" id="drawerEditBtn">✏ Изменить</a>
+            <button class="eye-btn" id="visibilityBtn">👁</button>
+            <span class="badge" id="courseBadge">Basic</span>
+        </div>
 
-        <div class="drawer-mentor">
-            <h4 class="mentor-title">Mentor</h4>
-            <div class="mentor-card">
-                <img id="mentorImg" src="" alt="Mentor">
-                <div class="mentor-info">
-                    <p id="mentorName"></p>
-                    <span id="mentorPhone"></span>
-                </div>
+        <a href="#" class="journal-block" id="drawerJournalBtn">
+            <span class="journal-icon">📋</span>
+            <span>Журнал</span>
+        </a>
+
+        <div class="accordion-list">
+
+            <div class="accordion-item" data-target="learnPanel">
+                <span>Чему вы научитесь?</span>
+                <span class="chevron">›</span>
+            </div>
+            <div id="learnPanel" class="accordion-panel hidden">
+                <p id="courseDescription"></p>
+            </div>
+
+            <div class="accordion-item" data-target="categoryPanel">
+                <span>Категория</span>
+                <span class="chevron">›</span>
+            </div>
+            <div id="categoryPanel" class="accordion-panel hidden">
+                <p id="courseCategory"></p>
+            </div>
+
+            <div class="accordion-item" data-target="statusPanel">
+                <span>Статус</span>
+                <span class="chevron">›</span>
+            </div>
+            <div id="statusPanel" class="accordion-panel hidden">
+                <p id="courseStatus"></p>
+                <p id="courseSertificate"></p>
+            </div>
+
+            <div class="accordion-item" data-target="reviewsPanel">
+                <span id="reviewsLabel">Отзывы</span>
+                <span class="rating" id="reviewsRatingTop"></span>
+                <span class="chevron">›</span>
+            </div>
+            <div id="reviewsPanel" class="accordion-panel hidden">
+                <p id="reviewsInfo"></p>
+            </div>
+
+        </div>
+
+        <div class="mentors-header">
+            <h4 class="mentor-title">Преподаватели</h4>
+            <a href="#" class="add-btn" id="addMentorBtn">+ Добавить</a>
+        </div>
+        <div id="mentorsList"></div>
+
+        <div id="mentorForm" class="add-mentor-form hidden">
+            <input type="text" id="newMentorName" placeholder="Имя преподавателя">
+            <input type="text" id="newMentorPhone" placeholder="Номер телефона">
+            <input type="text" id="newMentorImg" placeholder="Ссылка на фото (необязательно)">
+            <div class="add-mentor-actions">
+                <a href="#" class="save-btn" id="saveMentorBtn">Сохранить</a>
+                <button class="cancel-btn" id="cancelMentorBtn">Отмена</button>
             </div>
         </div>
 
