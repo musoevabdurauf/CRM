@@ -132,7 +132,7 @@ function initDrawer() {
         editBtn.onclick = function (event) {
             event.stopPropagation();
             localStorage.setItem("courseId", courses[i].id);
-            window.location.href = "edit.html";
+            window.location.href = "../abdurauf/edit.html";
         };
 
         let journalBtn = card.querySelector(".journal");
@@ -157,7 +157,7 @@ function initDrawer() {
         event.preventDefault();
         if (currentCourseIndex === null) return;
         localStorage.setItem("courseId", courses[currentCourseIndex].id);
-        window.location.href = "edit.html";
+        window.location.href = "../abdurauf/edit.html";
     };
 
     drawerJournalBtn.onclick = function (event) {
